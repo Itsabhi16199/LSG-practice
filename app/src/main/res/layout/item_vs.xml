@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="#0D104F">
+
+    <LinearLayout
+        android:id="@+id/match_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="26dp"
+        android:layout_marginLeft="14.61dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match 14"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingRight="10px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingRight="10px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apr 08,2023"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingRight="10px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingRight="10px"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19:03"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:paddingRight="10px"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_rectangle"
+        app:layout_constraintStart_toEndOf="@+id/match_venue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="23dp"
+       android:layout_marginLeft="85dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_live_1"
+            android:src="@drawable/ic_live_image"
+            android:padding="3dp"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="11dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:paddingTop="3dp"
+            android:paddingLeft="5dp"
+
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lsg_vs_pjb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/match_venue"
+        android:layout_marginTop="19dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/lucknow_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_lucknow_circle"
+            android:src="@drawable/lsg_logo"
+            android:padding="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/first_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="108/2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/score_yellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lucknow_logo"/>
+
+        <TextView
+            android:id="@+id/over_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(20.0)"
+            app:layout_constraintStart_toEndOf="@id/first_score"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/score_grey"
+            android:layout_marginLeft="6dp"/>
+
+        <TextView
+            android:id="@+id/second_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/first_score"
+            app:layout_constraintStart_toEndOf="@+id/lucknow_logo"
+            android:text="15/1"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/score_grey"/>
+
+        <TextView
+            android:id="@+id/second_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1.0)"
+            app:layout_constraintStart_toEndOf="@id/second_score"
+           app:layout_constraintTop_toBottomOf="@id/over_20"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/score_grey"
+            android:layout_marginLeft="6dp"/>
+
+        <TextView
+            android:id="@+id/third_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/second_score"
+            app:layout_constraintStart_toEndOf="@+id/lucknow_logo"
+            android:text="15/1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/score_grey"/>
+
+        <TextView
+            android:id="@+id/third_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1.0)"
+            app:layout_constraintStart_toEndOf="@id/third_score"
+            app:layout_constraintTop_toBottomOf="@id/second_over"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/score_grey"
+            android:layout_marginLeft="6dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/punjab_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/ic_punjab_circle"
+           android:layout_marginTop="15dp"
+            android:layout_marginRight="15.05dp"/>
+
+        <TextView
+            android:id="@+id/over_20_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(20.0)"
+           app:layout_constraintEnd_toStartOf="@+id/first_score_1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/score_grey"
+            android:layout_marginRight="5dp"/>
+
+
+        <TextView
+            android:id="@+id/first_score_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="108/2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/score_grey"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/punjab_logo"/>
+
+
+
+        <TextView
+            android:id="@+id/second_score_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/first_score_1"
+           app:layout_constraintEnd_toStartOf="@+id/punjab_logo"
+            android:text="15/1"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/score_grey"/>
+
+        <TextView
+            android:id="@+id/second_over_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1.0)"
+            app:layout_constraintEnd_toStartOf="@+id/second_score_2"
+            app:layout_constraintTop_toBottomOf="@id/over_20_1"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/score_grey"
+            android:layout_marginRight="5dp"/>
+
+
+        <TextView
+            android:id="@+id/third_score_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/second_score_2"
+           app:layout_constraintEnd_toStartOf="@+id/punjab_logo"
+            android:text="15/1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/score_yellow"/>
+
+        <TextView
+            android:id="@+id/third_over_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1.0)"
+            app:layout_constraintEnd_toStartOf="@+id/third_score_3"
+            app:layout_constraintTop_toBottomOf="@id/second_over_2"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/score_grey"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_rectangle_vs"
+            app:layout_constraintStart_toEndOf="@+id/lucknow_logo"
+            app:layout_constraintEnd_toStartOf="@+id/punjab_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="VS"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/lsg_vs_pjb">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lucknow Super Giants won by super over"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="19dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

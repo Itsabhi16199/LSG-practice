@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="389dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.framework.main.standing.Standing"
+    android:background="#002868">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id = "@+id/Standing"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       android:layout_marginTop="17dp"
+       android:paddingBottom="12dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text = "Standings"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="15dp"
+          android:textSize="22sp"
+          android:textColor="@color/white"
+          android:textStyle="bold"
+          />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id = "@+id/table"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@+id/Standing"
+       app:layout_constraintLeft_toLeftOf="parent"
+
+       android:layout_marginLeft="20dp"
+       >
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id = "@+id/standing_index"
+       android:layout_width="344dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="@+id/table"
+       app:layout_constraintLeft_toLeftOf="parent"
+       android:background="#0156E1"
+       android:paddingTop="12px"
+       android:paddingBottom="12px">
+      <TextView
+          android:id = "@+id/pos"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text = "Pos"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:layout_marginStart="3dp"/>
+
+      <TextView
+          android:id = "@+id/teams"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text = "Teams"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/pos"
+          android:layout_marginStart="10dp"/>
+
+      <TextView
+          android:id = "@+id/PTS"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text = "PTS"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_marginEnd="5dp"
+          android:textColor="@color/white"
+          android:textSize="12sp"
+          />
+
+      <TextView
+          android:id = "@+id/NRR"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text = "NRR"
+          android:textStyle="bold"
+         app:layout_constraintEnd_toStartOf="@+id/PTS"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_marginEnd="40dp"
+          android:textColor="@color/white"
+          android:textSize="12sp"
+          />
+
+      <TextView
+          android:id = "@+id/L"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text = "L"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@+id/NRR"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_marginEnd="25dp"
+          android:textColor="@color/white"
+          android:textSize="12sp"
+          />
+
+      <TextView
+          android:id = "@+id/W"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text = "W"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@+id/L"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_marginEnd="25dp"
+          android:textColor="@color/white"
+          android:textSize="12sp"
+          />
+
+      <TextView
+          android:id = "@+id/P"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text = "P"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@+id/W"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_marginEnd="25dp"
+          android:textColor="@color/white"
+          android:textSize="12sp"
+          />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       app:layout_constraintTop_toBottomOf="@+id/standing_index"
+       android:id = "@+id/standing_rv_list"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       android:layout_width="345dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintLeft_toLeftOf="parent"
+       />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

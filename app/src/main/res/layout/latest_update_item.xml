@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/lsg_purple"
+        >
+
+            <ImageView
+                android:id = "@+id/image"
+                android:layout_width="151dp"
+                android:layout_height="114dp"
+                android:src="@drawable/lsg_picture"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="15dp"
+                android:adjustViewBounds="true"
+                />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id = "@+id/news_para"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Lucknow Super Giants (LSG) won their third game on the trot in the"
+                android:textSize="11dp"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginRight="15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "News"
+                android:layout_marginTop="27dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/score_grey"
+                android:layout_marginBottom = "17dp"
+                />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    android:layout_marginLeft="151dp"
+                    android:layout_marginTop="30dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:background="@color/lsg_purple">
+
+        <TextView
+            android:id = "@+id/latest_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text = "Latest Updates"
+            android:layout_marginTop="17dp"
+            android:paddingBottom="12dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:id = "@+id/upadte_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/latest_update"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="17dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lsg_picture"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="349dp"
+                android:layout_height="121dp"
+                android:layout_marginTop="-11dp"
+                android:background="@drawable/rounded_border"
+                >
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Lucknow Super Giants (LSG) won their third game on the trot in the"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="15.54dp"
+                    android:paddingLeft="16dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+
+                    android:layout_marginBottom="45.46dp"
+
+                    android:paddingRight="16dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/videos_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="News"
+                    android:textColor="@color/score_grey"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="15.93dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginBottom="16.43dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id = "@+id/latest_rv_list"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/upadte_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="11dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
